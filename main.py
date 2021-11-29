@@ -46,8 +46,6 @@ async def on_message(message):
 	if message.author == client.user:
 		return
 
-	msg = message.content
-
 	if message.content.startswith('-meme'):
 		meme = get_meme()
 		await message.channel.send(meme)

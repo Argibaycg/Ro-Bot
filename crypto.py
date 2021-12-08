@@ -19,7 +19,7 @@ async def get_crypto_value(message):
 		response = requests.get('https://api.coingecko.com/api/v3/simple/price?ids=cardano&vs_currencies=usd')
 		response = response.json()
 		print(response)
-		price = response[['cardano']['usd']]
+		price = response['cardano']['usd']
 		await message.channel.send(f'Cardano esta ${price} USD')
 
 	if message.content.startswith('-shiba'):
